@@ -128,5 +128,10 @@ function mostraResultado(){
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
+
+function aleatorio(lista){
+    const posicao = Math.floor(Math.random() * lista.length);
+    
+}
 mostraPergunta();
 
