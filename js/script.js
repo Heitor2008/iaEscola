@@ -36,9 +36,14 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes;
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacoes);
     historiaFinal += afirmacoes + "";
-    atual++;
+    if (opcaoSelecionada.proxima != undefined){
+    atual = opcaoSelecionada.proxima;
+    } else {
+        mostraResultado();
+        return;
+    }
     mostraPergunta();
 }
 
